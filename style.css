@@ -982,15 +982,19 @@ body {
   padding: 15px;
 }
 
-.team-about .menu .row .col img {
-  display: block;
+.team-about .menu .row .col .info {
   border-radius: 10px;
+  position: relative;
+  display: block;
 }
 
-.team-about .menu .row .col img:hover {
+.team-about .menu .row .col .info::before{
+  content: "";
+  position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: #000000;
+  opacity: 0.5;
 }
 
 .team-about .menu .row .col .col-bottom {
@@ -1004,15 +1008,13 @@ body {
 }
 
 .provide .container{
-  margin-top: 100px;
   width: 100%;
-  padding: 20px 100px;
+  padding: 100px 200px;
   text-align: center;
 }
 
 .provide .container .reach-video{
   display: inline-block;
-  position: relative;
   background-image: url(https://wp.w3layouts.com/farmstead/wp-content/themes/farmstead/assets/images/video.jpg);
   background-position: center center;
   background-repeat: no-repeat;
@@ -1023,8 +1025,12 @@ body {
 }
 
 .provide .container .reach-video i{
-  font-size: 20px;
-  position: relative;
-  color: #000000;
-  z-index: 10;
+  font-size: 60px;
+  color: #ffffff;
+  line-height: 500px;
+  transition: all 0.5s;
+}
+
+.provide .container .reach-video i:hover{
+  transform: scale(1.1,1.1);
 }
